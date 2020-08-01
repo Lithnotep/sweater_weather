@@ -1,7 +1,7 @@
 class ForecastController
 
-  def show
+  def index
 
   end
-  
+
 end
