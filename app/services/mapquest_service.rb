@@ -1,8 +1,8 @@
 class MapquestService
 
-  def locations(params, station_location)
-    param_data = {from: params[:location],to: station_location}
-    get_json("directions/v2/route", param_data)
+  def locations(params)
+    param_data = {location: params[:location]}
+    get_json("geocoding/v1/address", param_data)
   end
 
   def conn
