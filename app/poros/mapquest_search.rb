@@ -7,8 +7,8 @@ class MapquestSearch
   def formatted_data
     data = MapquestService.new.locations(@params)
     {
-      lat: data[:results].first[:locations][:latLng][:lat],
-      lon: data[:results].first[:locations][:latLng][:lng]
+      lat: data[:results].first[:locations].first[:latLng][:lat],
+      lon: data[:results].first[:locations].first[:latLng][:lng]
     }
   end
 
