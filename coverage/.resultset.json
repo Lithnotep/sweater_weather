@@ -215,8 +215,19 @@
           null,
           null
         ]
+      },
+      "/Users/millmer/Documents/turing/mod_3/sweater_weather/app/controllers/api/v1/forecast_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1596330598
+    "timestamp": 1596332755
   }
 }

@@ -37,9 +37,14 @@ group :development, :test do
   gem 'capybara'
   gem 'pry'
   gem 'simplecov'
+  gem 'launchy'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'faker'
   gem 'factory_bot_rails'
+end
+
+group :test do
+
   gem 'rspec-rails'
 end
 
