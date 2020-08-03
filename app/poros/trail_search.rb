@@ -7,18 +7,15 @@ class TrailSearch
 
   def trails
     data = HikingProjectService.new.trails(@params)
-    {
-      trails: data[:trails].map do |trail|
-        search_params = {from: @from_location, to: trail[:location]}
+      data[:trails].map do |trail|
         {
           name: trail[:name],
           summary: trail[:summary],
           difficulty: trail[:difficulty],
           location: trail[:location],
-          distance: MapquestSearch.new(search_params).directions_data
+          distance: MapquestSearch.new({from: @from_location, to: trail[:location]}).directions_data
         }
       end
-    }
   end
 
 end
