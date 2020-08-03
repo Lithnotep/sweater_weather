@@ -15,7 +15,12 @@ describe "trail model" do
   it "can search" do
     params = {:lat=>39.738453, :lon=>-104.984853}
     location = "denver,co"
-    TrailSearch.new(params, location).trails
+    search = TrailSearch.new(params, location).trails
+    expect(search[:trails].first).to have_key(:name)
+    expect(search[:trails].first).to have_key(:summary)
+    expect(search[:trails].first).to have_key(:difficulty)
+    expect(search[:trails].first).to have_key(:location)
+    expect(search[:trails].first).to have_key(:distance)
 
   end
 
