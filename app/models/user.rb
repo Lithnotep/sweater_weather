@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates_presence_of :password, on: :create
   validates :email, uniqueness: true, presence: true
   validates_confirmation_of :password
+  validates :api_key, uniqueness: true
   has_secure_password
 
 private
