@@ -1,15 +1,15 @@
-require 'rails_helper'
-
-describe " Trails API" do
-  it "can get trails" do
-
-    get "/api/v1/trails?location=denver,co"
-
-    expect(response).to be_successful
-    trail = JSON.parse(response.body)
-
-  end
-end
+# require 'rails_helper'
+#
+# describe " Trails API" do
+#   it "can get trails" do
+#
+#     get "/api/v1/trails?location=denver,co"
+#
+#     expect(response).to be_successful
+#     trail = JSON.parse(response.body)
+#
+#   end
+# end
 
 # {
 #   "data": {

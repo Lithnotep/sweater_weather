@@ -2,15 +2,15 @@ require 'rails_helper'
 
 describe "trail model" do
   xit "can instantiate" do
-    data = {
-      location: "1",
-      forecast: "2",
-      trails: "3"
-    }
-    forecast = Trail.new(data)
-    expect(forecast.current_weather).to eq("1")
-    expect(forecast.hourly_weather).to eq("2")
-    expect(forecast.daily_weather).to eq("3")
+
+      location = "1",
+      forecast = "2",
+      trails = [1, 2, 3 ,4]
+
+    trail = Trail.new(location, forecast, trails)
+    expect(trail.location).to eq("1")
+    expect(trail.forecast).to eq("2")
+    expect(trail.trails).to eq("3")
   end
   it "can trail search" do
     params = {:lat=>39.738453, :lon=>-104.984853}
