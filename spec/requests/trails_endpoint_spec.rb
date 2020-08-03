@@ -1,16 +1,45 @@
-require 'rails_helper'
+# require 'rails_helper'
+#
+# describe " Trails API" do
+#   it "can get trails", :vcr do
+#
+#     get "/api/v1/trails?location=denver,co"
+#
+#     expect(response).to be_successful
+#     mock = JSON.parse(response.body)
+#
+#   end
+# end
 
-describe " Trails API" do
-  it "can get trails", :vcr do
-
-    get "/api/v1/trails?location=denver,co"
-
-    expect(response).to be_successful
-    mock = JSON.parse(response.body)
-
-  end
-end
-
+# {
+#   "data": {
+#     "id": "null",
+#     "type": "trail",
+#     "attributes": {
+#       "location": "denver,co",
+#       "forecast": {
+#         "summary": "Cloudy with a chance of meatballs",
+#         "temperature": "83"
+#       },
+#       "trails": [
+#         {
+#           "name": "Boulder Skyline Traverse",
+#           "summary": "The classic long mountain route in Boulder."
+#           "difficulty": "black"
+#           "location": "Superior, Colorado"
+#           "distance_to_trail": "23.008"
+#         },
+#         {
+#           "name": "Bear Peak Out and Back",
+#           "summary": "A must-do hike for Boulder locals and visitors alike!"
+#           "difficulty": "black"
+#           "location": "Boulder, Colorado"
+#           "distance_to_trail": "30.098"
+#         },
+#         {...}
+#       ]
+#     }
+#   }
 # Your API will return:
 # current forecast for the start location
 # name of the trail
