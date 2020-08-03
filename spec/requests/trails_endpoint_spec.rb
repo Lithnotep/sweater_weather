@@ -7,6 +7,11 @@ describe " Trails API" do
 
     expect(response).to be_successful
     trail = JSON.parse(response.body)
+    expect(trail).to have_key("data")
+    expect(trail["data"]).to have_key("attributes")
+    expect(trail["data"]["attributes"]).to have_key("location")
+    expect(trail["data"]["attributes"]).to have_key("forecast")
+    expect(trail["data"]["attributes"]).to have_key("trails")
 
   end
 end
