@@ -11,7 +11,8 @@ describe User, type: :model do
     it "can be creat user" do
       user = create(:user)
       user2 = create(:user, email: "new.com")
-      binding.pry
+      expect(user.email).to eq("test.com")
+      expect(user2.email).to eq("new.com")
     end
 
   end
