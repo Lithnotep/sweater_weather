@@ -7,7 +7,7 @@ class TrailSearch
 
   def trails
     data = HikingProjectService.new.trails(@params)
-    new = {
+    {
       trails: data[:trails].map do |trail|
         search_params = {from: @from_location, to: trail[:location]}
         {
@@ -19,7 +19,6 @@ class TrailSearch
         }
       end
     }
-    binding.pry
   end
 
 end
