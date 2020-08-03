@@ -10,3 +10,11 @@ describe " Trails API" do
 
   end
 end
+
+# Your API will return:
+# current forecast for the start location
+# name of the trail
+# summary of each trail
+# difficulty of each trail
+# location of each trail
+# estimated travel time for each trail
