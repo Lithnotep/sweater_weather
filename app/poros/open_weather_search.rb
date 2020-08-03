@@ -26,4 +26,13 @@ class OpenWeatherSearch
     }
   end
 
+  def current_data
+    data = OpenWeatherService.new.current_weather(@params)
+    {
+      summary: data[:weather].first[:description],
+      temperature: data[:main][:temp]
+    }
+  end
+
+
 end

@@ -12,7 +12,7 @@ describe "trail model" do
     expect(forecast.hourly_weather).to eq("2")
     expect(forecast.daily_weather).to eq("3")
   end
-  it "can search" do
+  it "can trail search" do
     params = {:lat=>39.738453, :lon=>-104.984853}
     location = "denver,co"
     search = TrailSearch.new(params, location).trails
@@ -22,6 +22,14 @@ describe "trail model" do
     expect(search[:trails].first).to have_key(:location)
     expect(search[:trails].first).to have_key(:distance)
 
+  end
+  it "can trail search" do
+    params = {:lat=>39.738453, :lon=>-104.984853}
+
+    search = OpenWeatherSearch.new(params).current_data
+
+    expect(search).to have_key(:summary)
+    expect(search).to have_key(:temperature)
   end
 
 end
