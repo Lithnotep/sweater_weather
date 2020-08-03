@@ -5,10 +5,9 @@ class UnsplashSearch
   end
 
   def formatted_data
-    data = UnsplashService.new.locations(@params)
-    binding.pry
+    data = UnsplashService.new.picture(@params)
     {
-
+      image_url: data[:results].first[:urls][:regular]
     }
   end
 

@@ -1,7 +1,8 @@
 class UnsplashService
 
-  def weather(params)
-    param_data = {query: params[:thing]}
+  def picture(params)
+    param_clean = params[:location].split(/,/).first
+    param_data = {query: "#{param_clean} skyline"}
     get_json("search/photos", param_data)
   end
 

@@ -41,10 +41,12 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 4.0'
   gem 'faker'
   gem 'factory_bot_rails'
+
 end
 
 group :test do
-
+  gem 'webmock'
+  gem 'vcr'
   gem 'rspec-rails'
 end
 
