@@ -14,9 +14,7 @@ class MapquestSearch
 
   def directions_data
     data = MapquestService.new.directions(@params)
-    {
-      distance: data[:route][:distance]
-    }
+    data[:route][:distance]
   end
 
 end
