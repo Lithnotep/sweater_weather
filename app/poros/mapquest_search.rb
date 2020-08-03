@@ -16,5 +16,4 @@ class MapquestSearch
     data = MapquestService.new.directions(@params)
     data[:route][:distance]
   end
-
 end

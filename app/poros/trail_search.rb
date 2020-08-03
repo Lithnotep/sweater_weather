@@ -17,12 +17,4 @@ class TrailSearch
         }
       end
   end
-
 end
-# {
-#           "name": "Boulder Skyline Traverse",
-#           "summary": "The classic long mountain route in Boulder."
-#           "difficulty": "black"
-#           "location": "Superior, Colorado"
-#           "distance_to_trail": "23.008"
-#         }

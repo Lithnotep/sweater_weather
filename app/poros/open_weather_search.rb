@@ -33,6 +33,4 @@ class OpenWeatherSearch
       temperature: data[:main][:temp]
     }
   end
-
-
 end
