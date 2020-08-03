@@ -1,10 +1,10 @@
 class Trail
-  attr_reader :id, :location, :forecast, :trail
-  def initialize(location, forecast, trail)
+  attr_reader :id, :location, :forecast, :trails
+  def initialize(location, forecast, trails)
     @id = nil
     @location = location
     @forecast = forecast
-    @trail = trail
+    @trails = trails
   end
 
 end
