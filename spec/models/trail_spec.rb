@@ -23,7 +23,7 @@ describe "trail model" do
     expect(search[:trails].first).to have_key(:distance)
 
   end
-  it "can trail search" do
+  it "can current_weather search" do
     params = {:lat=>39.738453, :lon=>-104.984853}
 
     search = OpenWeatherSearch.new(params).current_data
