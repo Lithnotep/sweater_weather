@@ -11,12 +11,9 @@ describe "User API" do
 
     }
 
-
-
-
     expect(response).to be_successful
-    weather = JSON.parse(response.body)
-    expect(weather["data"]["attributes"]["email"]).to eq("whatever@example.com")
-
+    user = JSON.parse(response.body)
+    expect(user["data"]["attributes"]["email"]).to eq("whatever@example.com")
   end
+
 end
