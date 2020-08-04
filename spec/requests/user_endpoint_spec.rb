@@ -15,7 +15,7 @@ describe "User API" do
     user = JSON.parse(response.body)
     expect(user["data"]["attributes"]["email"]).to eq("whatever@example.com")
   end
-    it "can create User", :vcr do
+    it "can fail to make user with preexisting email", :vcr do
 
       post "/api/v1/users", :params => {
 
