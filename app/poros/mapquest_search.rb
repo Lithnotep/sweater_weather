@@ -12,4 +12,9 @@ class MapquestSearch
     }
   end
 
+  def directions_data
+    data = MapquestService.new.directions(@params)
+    data[:route][:distance]
+  end
+
 end
