@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Background API" do
-  it "can get forecast", :vcr do
+  it "can get forecast" do
 
     get '/api/v1/backgrounds?location=denver,co'
 

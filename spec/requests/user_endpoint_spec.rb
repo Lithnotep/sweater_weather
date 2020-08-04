@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "User API" do
-  it "can create User", :vcr do
+  it "can create User" do
 
     post "/api/v1/users", :params => {
 
@@ -15,7 +15,7 @@ describe "User API" do
     user = JSON.parse(response.body)
     expect(user["data"]["attributes"]["email"]).to eq("whatever@example.com")
   end
-    it "can fail to make user with preexisting email", :vcr do
+    it "can fail to make user with preexisting email" do
 
       post "/api/v1/users", :params => {
 

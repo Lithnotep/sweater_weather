@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "background model" do
-  it "can instantiate", :vcr do
+  it "can instantiate" do
     data = {
       image_url: "1"
     }

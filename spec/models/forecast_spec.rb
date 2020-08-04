@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "forecast model" do
-  it "can instantiate", :vcr do
+  it "can instantiate" do
     data = {
       current_data: "1",
       hourly_data: "2",

@@ -13,6 +13,7 @@ class MapquestSearch
   end
 
   def directions_data
+    binding.pry
     data = MapquestService.new.directions(@params)
     data[:route][:distance]
   end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "session API" do
-  it "can create session", :vcr do
+  it "can create session" do
     user = create(:user, email: "whatever@example.com", password: "password")
         post "/api/v1/sessions", :params => {
         "email": "whatever@example.com",
